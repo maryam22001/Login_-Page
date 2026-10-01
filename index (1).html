@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanStyle — تسجيل الدخول</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="brand">
+    <div class="brand__content">
+      <p class="brand__logo">
+        <span>URBAN</span>
+        <span>STYLE</span>
+      </p>
+      <div class="brand__stripe" aria-hidden="true"></div>
+      <p class="brand__tagline">الشارع لغتك، والستايل توقيعك. قطع محدودة تتجدد كل موسم.</p>
+    </div>
+    <p class="brand__meta">© 2026 UrbanStyle — كل القطع أصلية ومضمونة</p>
+  </aside>
+
+  <main class="auth">
+    <div class="auth__inner">
+
+      <nav class="switcher" role="tablist">
+        <button class="switcher__tab is-active" data-target="login" role="tab" aria-selected="true" type="button">تسجيل الدخول</button>
+        <button class="switcher__tab" data-target="signup" role="tab" aria-selected="false" type="button">إنشاء حساب</button>
+        <span class="switcher__indicator" aria-hidden="true"></span>
+      </nav>
+
+      <form class="form is-active" id="login-form" novalidate>
+        <h1 class="form__title">أهلاً بعودتك</h1>
+        <p class="form__subtitle">سجّل دخولك لمتابعة تسوّقك من UrbanStyle</p>
+
+        <label class="field">
+          <span class="field__label">البريد الإلكتروني</span>
+          <input type="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
+        </label>
+
+        <label class="field">
+          <span class="field__label">كلمة المرور</span>
+          <input type="password" name="password" placeholder="••••••••" autocomplete="current-password" minlength="6" required>
+        </label>
+
+        <div class="form__row">
+          <label class="checkbox">
+            <input type="checkbox" name="remember">
+            <span>تذكرني</span>
+          </label>
+          <a href="#" class="link">نسيت كلمة المرور؟</a>
+        </div>
+
+        <button type="submit" class="btn">دخول</button>
+
+        <p class="form__switch-text">مستخدم جديد؟ <button type="button" class="link-btn" data-target="signup">أنشئ حسابك الآن</button></p>
+      </form>
+
+      <form class="form" id="signup-form" novalidate>
+        <h1 class="form__title">انضم إلى UrbanStyle</h1>
+        <p class="form__subtitle">أنشئ حسابك وابدأ تجربة تسوّق مختلفة</p>
+
+        <label class="field">
+          <span class="field__label">الاسم الكامل</span>
+          <input type="text" name="fullname" placeholder="اسمك بالكامل" autocomplete="name" required>
+        </label>
+
+        <label class="field">
+          <span class="field__label">البريد الإلكتروني</span>
+          <input type="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
+        </label>
+
+        <label class="field">
+          <span class="field__label">كلمة المرور</span>
+          <input type="password" name="password" placeholder="8 أحرف على الأقل" autocomplete="new-password" minlength="8" required>
+        </label>
+
+        <label class="checkbox checkbox--full">
+          <input type="checkbox" name="terms" required>
+          <span>أوافق على الشروط وسياسة الخصوصية</span>
+        </label>
+
+        <button type="submit" class="btn">إنشاء الحساب</button>
+
+        <p class="form__switch-text">لديك حساب بالفعل؟ <button type="button" class="link-btn" data-target="login">سجّل دخولك</button></p>
+      </form>
+
+      <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
